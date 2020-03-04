@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 /** 
  * Model is a clickable suqare that will be used later on in my GUI
@@ -8,10 +9,9 @@ import javax.swing.*;
 
 public class Square
 {
-    public void newSquare()
-    {
-        ImageIcon i = new ImageIcon("Water.png");
-        JButton b = new JButton(i);
-        b.setIcon(i);
+    public Square(){
+        JButton jb = new JButton();
+        
+        jb.setIcon(new ImageIcon("Water.png"));
     }
 }
