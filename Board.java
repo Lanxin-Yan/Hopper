@@ -24,7 +24,7 @@ public class Board//inherits all methods from Square class
             // added panel
             
             a.changeButton();
-            
+
             for (int x = 0; x < 5; x++)
             {
                 for (int y =0; y < 5; y++)
@@ -40,6 +40,5 @@ public class Board//inherits all methods from Square class
     public static void main (String[] args)
     {
         Board c = new Board(700, 700, "Hopper!");
-
     }
 }
