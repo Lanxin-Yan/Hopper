@@ -3,25 +3,22 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
-
+import java.awt.event.*;
 /**
  * Model is a clickable square that will be used later on in my GUI This class
  * represents a Square objects, when combined with the Board.java class,
  * Instances of the Square class can be displayed on the screen.
  */
 
-public class Square extends JButton {
+public class Square extends JButton implements ActionListener{
 
         private static final long serialVersionUID = 1L;
         private ImageIcon water = new ImageIcon("Water.png");
         private ImageIcon lilypad = new ImageIcon("Lilypad.png");
         private ImageIcon greenFrog = new ImageIcon("GreenFrog.png");
         private ImageIcon redFrog = new ImageIcon("RedFrog.png");
-
-        public JButton waterButton = new JButton(water);
-        public JButton lilyButton = new JButton(lilypad);
-        public JButton frogButton = new JButton(greenFrog);
-        public JButton redButton = new JButton(redFrog);
+        private ImageIcon greenFrog2 = new ImageIcon("GreenFrog2.png");
+        private ImageIcon redFrog2 = new ImageIcon("RedFrog2.png");
 
         private JButton[][] square = new JButton[5][5];
 
@@ -55,12 +52,12 @@ public class Square extends JButton {
                             for (int y=0; y<line.length; y++)
                             {
                                 myArray[x][y] = line[y];
-
-                                System.out.println("" + line[y]);
-                                
+                        
                                 switch (myArray[x][y]){
+
                                     case "g":
                                     square[x][y].setIcon(greenFrog);
+                                    square[x][y].addActionListener(this);
                                     break;
                                     
                                     case "r":
@@ -77,7 +74,6 @@ public class Square extends JButton {
 
                                     default:
                                     square[x][y].setIcon(water);
-
                                 }
                             }
                         }
@@ -87,5 +83,10 @@ public class Square extends JButton {
                 {
                     e.printStackTrace();
                 }
+            }
+
+            public void actionPerformed(ActionEvent c) 
+            {   
+                ((AbstractButton) c.getSource()).setIcon(greenFrog2);
             }
     }

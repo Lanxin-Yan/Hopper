@@ -1,6 +1,5 @@
 import java.awt.*;
 import javax.swing.*;
-
 /** 
 * Model is a class that will use Square.java to build a Graphical User Interface(GUI)
 */
@@ -37,8 +36,9 @@ public class Board//inherits all methods from Square class
             window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //set exit on close
             window.setVisible(true); //set window frame visible
     }
+
     public static void main (String[] args)
     {
-        Board c = new Board(700, 700, "Hopper!");
+        Board c = new Board(750, 750, "Hopper!");
     }
 }
