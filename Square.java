@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
-
 /**
  * Model is a clickable square that will be used later on in my GUI This class
  * represents a Square objects, when combined with the Board.java class,
