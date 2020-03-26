@@ -18,12 +18,7 @@ public class Board implements ActionListener // inherits all methods from Square
     private ImageIcon greenFrog2 = a.greenFrog2;
     private ImageIcon redFrog = a.redFrog;
     private ImageIcon redFrog2 = a.redFrog2;
-
     private ImageIcon lilypad = a.lilypad;
-    /*private ImageIcon greenFrog = new ImageIcon("GreenFrog.png");
-    private ImageIcon redFrog = new ImageIcon("RedFrog.png");
-    private ImageIcon greenFrog2 = new ImageIcon("GreenFrog2.png");
-    private ImageIcon redFrog2 = new ImageIcon("RedFrog2.png");*/
 
     public Board(int width, int height, String title) 
     {
@@ -34,13 +29,13 @@ public class Board implements ActionListener // inherits all methods from Square
         panel = new JPanel();
         panel.setLayout(new GridLayout(5, 5));
         // added panel
+       // a.levelSelector();
         a.changeButton();
 
         for (int x = 0; x < 5; x++) {
             for (int y = 0; y < 5; y++) {
                 a.getSquare(x, y).addActionListener(this);
                 panel.add(a.getSquare(x, y));
-
             }
         }
         window.setContentPane(panel); // adding panel to windown frame

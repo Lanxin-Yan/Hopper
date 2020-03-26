@@ -1,0 +1,5 @@
+l w l w r
+w l w l w
+l w l w g
+w l w l w
+l w l w l
